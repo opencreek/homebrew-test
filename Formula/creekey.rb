@@ -4,7 +4,7 @@ class Creekey < Formula
   url "https://github.com/opencreek/creekey-cli.git", tag: "0.1.0-beta11", revision: "917cdda637c3d03d84e43884907b64a82365289e"
   license ""
 
-  head "https://github.com/opencreek/creekey-cli.git"
+  head "https://github.com/opencreek/creekey-cli.git", branch: "main"
 
   depends_on "rust" => :build
 
