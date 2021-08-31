@@ -1,11 +1,10 @@
 class Creekey < Formula
   desc "Keep your private keys on your phone!"
-  homepage "https://creekey.io"
+  homepage "https://opencreek.tech"
   url "https://github.com/opencreek/creekey-cli.git", tag: "0.1.0-beta11", revision: "917cdda637c3d03d84e43884907b64a82365289e"
-  version "0.1.0-beta11"
   license ""
 
-  head "https://github.com:opencreek/creekey-cli.git"
+  head "https://github.com/opencreek/creekey-cli.git"
 
   depends_on "rust" => :build
 
