@@ -1,14 +1,14 @@
 class Creekey < Formula
   desc "Keep your private keys on your phone!"
   homepage "https://creekey.io"
+  url "https://github.com/opencreek/creekey-cli.git", tag: "0.1.0-beta11", revision: "917cdda637c3d03d84e43884907b64a82365289e"
   version "0.1.0-beta11"
   license ""
 
-  url "https://github.com/opencreek/creekey-cli.git", tag: "0.1.0-beta11", revision: "917cdda637c3d03d84e43884907b64a82365289e"
 
   head "https://github.com:opencreek/creekey-cli.git"
 
-  depends_on "rust" => ":build"
+  depends_on "rust" => :build
 
   def install
     system "cargo", "install", *std_cargo_args
@@ -17,12 +17,13 @@ class Creekey < Formula
     bin.install "target/release/creekey-git-sign"
   end
 
-  plist_options :login => true
+  plist_options login: true
   def caveats
     "Run 'creekey pair' to pair with your phone!"
   end
 
-  def plist; <<-EOS
+  def plist;
+    <<-EOS
     <?xml version="1.0" encoding="UTF-8"?>
     <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
     <plist version="1.0">
